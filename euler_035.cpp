@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <set>
-#include "/home/nomnom/Documents/git/cpp/vectorheader.h"
+#include "vectorheader.h"
 
 std::vector<unsigned int> createPermutations(int n);
 std::vector<unsigned int> makeVectorFromInt(int num);
