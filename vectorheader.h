@@ -17,6 +17,9 @@ int reverseInt(int n)
     return rev;
 }
 
+/**
+ * quite fast, looks up 10^6 numbers in < 5 seconds on a slow laptop
+ */
 bool isPrime(int n)
 {
 	if (n % 2 == 0)
@@ -30,7 +33,9 @@ bool isPrime(int n)
 }
 // end helper function
 
-/* convert one dimensional vector / matrice to int */
+/* convert one dimensional vector / matrice to int 
+ this will just 'convert' a vector on the form <a,b,c> to an 
+ int abc. There is no scalar calculation, just purely for representation */
 int makeIntFromVector(std::vector<unsigned int> n)
 {
     int m = 0;
@@ -54,6 +59,10 @@ void vectorUnsPrint(const std::vector<unsigned int> &vec)
     std::cout << ")" << std::endl;
 }
 
+/** 
+ * notice the extra 's' in vectors, this is vector of vectors, like
+ * <<a,b,c>,<d,e,f>,<g,e,h>>, two dimensional matrice.
+ */
 void vectorsUnsPrint(const std::vector<std::vector<unsigned int>> &vec)
 {
     for (int i = 0; i < vec.size() - 1; i++)
@@ -66,6 +75,10 @@ void vectorsUnsPrint(const std::vector<std::vector<unsigned int>> &vec)
     }
 }
 
+/**
+ * the choice of naming the function was unfortunate, reverseVector
+ * is more appropriate and inline with what the function does. 
+ */
 std::vector<unsigned int> rotateVector(std::vector<unsigned int> &v)
 {
     std::vector<unsigned int> arr;
@@ -78,6 +91,9 @@ std::vector<unsigned int> rotateVector(std::vector<unsigned int> &v)
     return arr;
 }
 
+/**
+ * turns an int abc into a vector<a,b,c>
+ */ 
 std::vector<unsigned int> makeVectorFromInt(int num)
 {
     num = reverseInt(num);
@@ -105,7 +121,11 @@ std::vector<unsigned int> createPermutations(int n){
     return perms;
 }
 
-/* check whether all ints in vector are primes */
+/** 
+ * check whether all ints in vector are primes 
+ * it's really important to optimize the isPrime() function, else
+ * this lookup will take forever.
+ */
 bool isVectorPrime(std::vector<unsigned int> &a)
 {
     bool flag = false;
