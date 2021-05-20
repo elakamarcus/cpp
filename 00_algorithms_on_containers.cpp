@@ -22,10 +22,10 @@ int main(){
   
   // iterate through vector and check if any element > 5
   bool b = any_of(v.being(), v.end(), [](int a) { return a > 5; });
-  cout << boolaplha << b << endl;
+  cout << boolaplha << b << endl; // returns false
   // iterate through array and check if any element > 5
   bool c = any_of(being(a), end(a), [](int a) {return a > 5;});
-  cout << boolalpha << c << endl;
+  cout << boolalpha << c << endl; // return true
   
   return 0;
 }
