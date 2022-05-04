@@ -3,6 +3,7 @@
 */
 #include <vector>
 #include <algorithm>
+#include <iostream> // just to avoid errors in the editor lint
 
 // helper functions
 int reverseInt(int n)
