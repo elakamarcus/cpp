@@ -21,14 +21,14 @@ int main() {
         //std::cout << x << std::endl;
     }*/
     std::rotate(test1.begin(),test1.begin()+1,test1.end());
-//    test1.insert(test1.begin(), *test1.end());
+
     std::cout << "( ";
     for( auto x : test1){
         std::cout << x << " ";
     }
     std::cout << ")" << std::endl;
     std::rotate(test1.begin(),test1.begin()+1,test1.end());
-//    test1.insert(test1.begin(), *test1.end());
+
     std::cout << "( ";
     for( auto x : test1){
         std::cout << x << " ";

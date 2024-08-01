@@ -4,6 +4,7 @@
 using std::cout;
 using std::string;
 
+/// @brief Sprite class with public accessible function
 class Sprite
 {
     string name;
@@ -17,7 +18,10 @@ public:
         cout << name << " @ (" << x << ", " << y << ")" << std::endl;
     }
 };
-
+/// @brief Should restrict this to one Sprite object, to make the code more generic
+/// @param a First Sprite to output
+/// @param b Second Sprite to output
+/// @param c Third Sprite to output
 void SpriteOutput(const Sprite a, const Sprite *b, const Sprite& c) {
     cout << "\n";
     cout << "a: " << &a << "\n";

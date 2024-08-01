@@ -17,7 +17,7 @@ public:
     void drink();
 };
 
-class Dog : pubic Animal
+class Dog : public Animal
 {
     int dog_age; //age in dog years
 public:
